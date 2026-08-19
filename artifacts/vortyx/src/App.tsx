@@ -82,7 +82,7 @@ function Home() {
             />
             <div>
               <div className="vortex-display text-[19px] font-bold tracking-[-.07em] text-[#effaff]">VORTYX</div>
-              <div className="vortex-mono text-[8px] uppercase tracking-[.24em] text-[#6d8491]">Binary intelligence</div>
+              <div className="vortex-mono text-[8px] uppercase tracking-[.24em] text-[#6d8491]">Trading</div>
             </div>
           </div>
           <div className="flex items-center gap-3 sm:gap-6">
@@ -115,7 +115,7 @@ function Home() {
         <footer className="vortex-reveal vortex-reveal-delay-3 mt-auto flex flex-col gap-3 border-t border-white/[.09] py-5 text-[10px] text-[#71858e] sm:flex-row sm:items-center sm:justify-between" data-testid="footer-disclaimer">
           <div className="flex items-center gap-2">
             <CircleAlert className="h-3.5 w-3.5 text-[#e7b260]" />
-            <span>La práctica no elimina el riesgo. Opera solo con capital que puedas permitirte perder.</span>
+            <span>Opera solo con capital que puedas permitirte perder.</span>
           </div>
           <span className="vortex-mono uppercase tracking-[.16em] text-[#536975]">VORTYX / 2025 — DEMO BUILD</span>
         </footer>
@@ -156,13 +156,12 @@ function Landing({
           <span className="vortex-mono text-[10px] uppercase tracking-[.16em] text-[#526d78]">Focused market practice</span>
         </div>
         <h1 className="vortex-display max-w-[720px] text-[clamp(3.5rem,8vw,7.75rem)] font-semibold leading-[.86] text-[#edfaff]" data-testid="text-hero-title">
-          Trade the<br />
-          <span className="text-[#63dafa]">moment.</span>
-          <br />
-          Understand<br className="hidden sm:block" /> the move.
+          Tu libertad<br />
+          <span className="text-[#63dafa]">financiera</span><br />
+          está AQUÍ.
         </h1>
         <p className="mt-8 max-w-[510px] text-[15px] leading-7 text-[#8ca4ae] sm:text-[17px]">
-          Un espacio de simulación para estudiar el ritmo de los mercados, probar hipótesis y tomar decisiones con más contexto. Sin promesas. Solo práctica deliberada.
+          Un espacio el cual podrás ser libre financieramente. Si sabes hacerlo...
         </p>
 
         <div className="mt-11 grid max-w-[650px] grid-cols-1 border-y border-white/[.1] sm:grid-cols-3" data-testid="benefits-list">
@@ -173,7 +172,7 @@ function Landing({
 
         <div className="mt-8 flex items-center gap-3 text-[11px] text-[#607b87]" data-testid="text-platform-note">
           <Sparkles className="h-3.5 w-3.5 text-[#e7b260]" />
-          <span>Diseñado para quienes prefieren entender antes de acelerar.</span>
+          <span>Diseñado para quienes quieran cambiar sus vidas.</span>
         </div>
       </div>
 
@@ -305,7 +304,7 @@ function LoginCard({
       </button>
       <div className="mt-6 flex gap-2 border-t border-white/[.08] pt-4 text-[10px] leading-4 text-[#718b95]">
         <CircleAlert className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#e8b96d]" />
-        <span>Las opciones binarias implican riesgo. No existen ganancias garantizadas. Esto es una demostración educativa, no asesoría financiera.</span>
+        <span>Las opciones binarias implican riesgo. Debes entender el mercado; podrás buscar ganancias, pero nunca están garantizadas.</span>
       </div>
     </div>
   );
