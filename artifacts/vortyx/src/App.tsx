@@ -117,7 +117,7 @@ function Home() {
             <CircleAlert className="h-3.5 w-3.5 text-[#e7b260]" />
             <span>Opera solo con capital que puedas permitirte perder.</span>
           </div>
-          <span className="vortex-mono uppercase tracking-[.16em] text-[#536975]">VORTYX / 2025 — DEMO BUILD</span>
+          <span className="vortex-mono uppercase tracking-[.16em] text-[#536975]">VORTYX / 2026</span>
         </footer>
       </div>
     </main>
