@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "VORTYX"
+description = "Landing page y acceso local de prueba para VORTYX, una plataforma de trading de opciones binarias. Incluye presentación de beneficios, acceso demo sin autenticación real y una base visual lista para el futuro panel de usuario."
+version = "1.0.0"
+id = "artifacts/vortyx"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18528
+
+[services.development]
+run = "pnpm --filter @workspace/vortyx run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/vortyx", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/vortyx/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18528"
+BASE_PATH = "/"
