@@ -46,11 +46,11 @@ function Home() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!email.trim() || !email.includes('@')) {
-      setFormError('Escribe un email válido para continuar.');
+      setFormError('Enter a valid email to continue.');
       return;
     }
     if (password.trim().length < 4) {
-      setFormError('Usa al menos 4 caracteres para la clave de prueba.');
+      setFormError('Use at least 4 characters for the demo password.');
       return;
     }
     setFormError('');
@@ -76,7 +76,7 @@ function Home() {
           <div className="flex items-center gap-3">
             <img
               src={logoPath}
-              alt="Símbolo VORTYX"
+              alt="VORTYX symbol"
               className="h-10 w-10 rounded-[11px] border border-white/15 object-cover object-center"
               data-testid="img-vortyx-logo"
             />
@@ -115,7 +115,7 @@ function Home() {
         <footer className="vortex-reveal vortex-reveal-delay-3 mt-auto flex flex-col gap-3 border-t border-white/[.09] py-5 text-[10px] text-[#71858e] sm:flex-row sm:items-center sm:justify-between" data-testid="footer-disclaimer">
           <div className="flex items-center gap-2">
             <CircleAlert className="h-3.5 w-3.5 text-[#e7b260]" />
-            <span>Opera solo con capital que puedas permitirte perder.</span>
+            <span>Trade only with capital you can afford to lose.</span>
           </div>
           <span className="vortex-mono uppercase tracking-[.16em] text-[#536975]">VORTYX / 2026</span>
         </footer>
@@ -156,23 +156,23 @@ function Landing({
           <span className="vortex-mono text-[10px] uppercase tracking-[.16em] text-[#526d78]">Focused market practice</span>
         </div>
         <h1 className="vortex-display max-w-[720px] text-[clamp(3.5rem,8vw,7.75rem)] font-semibold leading-[.86] text-[#edfaff]" data-testid="text-hero-title">
-          Tu libertad<br />
-          <span className="text-[#63dafa]">financiera</span><br />
-          está AQUÍ.
+          Your financial<br />
+          <span className="text-[#63dafa]">freedom</span><br />
+          is HERE.
         </h1>
         <p className="mt-8 max-w-[510px] text-[15px] leading-7 text-[#8ca4ae] sm:text-[17px]">
-          Un espacio el cual podrás ser libre financieramente. Si sabes hacerlo...
+          A space where you can become financially free. If you know how to do it...
         </p>
 
         <div className="mt-11 grid max-w-[650px] grid-cols-1 border-y border-white/[.1] sm:grid-cols-3" data-testid="benefits-list">
-          <Benefit icon={<Target />} index="01" title="Foco" copy="Menos ruido. Más señal." />
-          <Benefit icon={<Gauge />} index="02" title="Ritmo" copy="Lecturas en tiempo real." />
-          <Benefit icon={<ShieldCheck />} index="03" title="Contexto" copy="Riesgo siempre visible." />
+          <Benefit icon={<Target />} index="01" title="Focus" copy="Less noise. More signal." />
+          <Benefit icon={<Gauge />} index="02" title="Rhythm" copy="Real-time market readings." />
+          <Benefit icon={<ShieldCheck />} index="03" title="Context" copy="Risk always visible." />
         </div>
 
         <div className="mt-8 flex items-center gap-3 text-[11px] text-[#607b87]" data-testid="text-platform-note">
           <Sparkles className="h-3.5 w-3.5 text-[#e7b260]" />
-          <span>Diseñado para quienes quieran cambiar sus vidas.</span>
+          <span>Designed for those ready to change their lives.</span>
         </div>
       </div>
 
@@ -225,35 +225,35 @@ function LoginCard({
       <div className="vortex-scanline relative mb-8 flex items-start justify-between">
         <div>
           <div className="vortex-mono mb-3 text-[10px] uppercase tracking-[.2em] text-[#61dafa]">Terminal access</div>
-          <h2 className="vortex-display text-[32px] font-semibold leading-none text-[#effaff]">Entra a tu<br />espacio de práctica.</h2>
+          <h2 className="vortex-display text-[32px] font-semibold leading-none text-[#effaff]">Enter your<br />practice space.</h2>
         </div>
         <LockKeyhole className="mt-1 h-5 w-5 text-[#627e89]" />
       </div>
       <p className="mb-7 max-w-[340px] text-[12px] leading-5 text-[#7f99a3]">
-        Acceso local de prueba. No creamos cuentas ni guardamos credenciales.
+        Local demo access. We don't create accounts or store credentials.
       </p>
 
       <form className="space-y-4" onSubmit={onSubmit} data-testid="form-demo-login">
         <label className="block">
-          <span className="vortex-mono mb-2 block text-[9px] uppercase tracking-[.16em] text-[#76929d]">Email de explorador</span>
+          <span className="vortex-mono mb-2 block text-[9px] uppercase tracking-[.16em] text-[#76929d]">Explorer email</span>
           <input
             type="email"
             value={email}
             onChange={(event) => onEmailChange(event.target.value)}
-            placeholder="tu@email.com"
+            placeholder="you@email.com"
               autoComplete="email"
             className="vortex-field h-12 w-full rounded-lg border border-[#2b4652] bg-[#0b1821] px-4 text-[13px] text-[#dff6fb] placeholder:text-[#49636f]"
             data-testid="input-email"
           />
         </label>
         <label className="block">
-          <span className="vortex-mono mb-2 block text-[9px] uppercase tracking-[.16em] text-[#76929d]">Clave de sesión</span>
+          <span className="vortex-mono mb-2 block text-[9px] uppercase tracking-[.16em] text-[#76929d]">Session password</span>
           <div className="relative">
             <input
               type={showPassword ? 'text' : 'password'}
               value={password}
               onChange={(event) => onPasswordChange(event.target.value)}
-              placeholder="mínimo 4 caracteres"
+              placeholder="minimum 4 characters"
               autoComplete="current-password"
               className="vortex-field h-12 w-full rounded-lg border border-[#2b4652] bg-[#0b1821] px-4 pr-12 text-[13px] text-[#dff6fb] placeholder:text-[#49636f]"
               data-testid="input-password"
@@ -262,7 +262,7 @@ function LoginCard({
               type="button"
               onClick={onTogglePassword}
               className="absolute right-3 top-1/2 -translate-y-1/2 rounded-md p-1.5 text-[#66828d] transition-colors hover:text-[#a7eafa] focus:outline-none focus:ring-2 focus:ring-[#62dcfb]/40"
-              aria-label={showPassword ? 'Ocultar clave' : 'Mostrar clave'}
+              aria-label={showPassword ? 'Hide password' : 'Show password'}
               data-testid="button-toggle-password"
             >
               {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
@@ -280,14 +280,14 @@ function LoginCard({
           className="vortex-button flex h-12 w-full items-center justify-between rounded-lg bg-[#65dcfa] px-4 text-[12px] font-bold uppercase tracking-[.1em] text-[#071017] focus:outline-none focus:ring-2 focus:ring-[#a0edff] focus:ring-offset-2 focus:ring-offset-[#101d27]"
           data-testid="button-submit-login"
         >
-          <span>Continuar en demo</span>
+          <span>Continue in demo</span>
           <ArrowRight className="h-4 w-4" />
         </button>
       </form>
 
       <div className="my-6 flex items-center gap-3">
         <div className="h-px flex-1 bg-white/[.1]" />
-        <span className="vortex-mono text-[9px] uppercase tracking-[.16em] text-[#536f7b]">o empieza ahora</span>
+        <span className="vortex-mono text-[9px] uppercase tracking-[.16em] text-[#536f7b]">or start now</span>
         <div className="h-px flex-1 bg-white/[.1]" />
       </div>
       <button
@@ -297,14 +297,14 @@ function LoginCard({
         data-testid="button-start-demo"
       >
         <span>
-          <span className="block text-[12px] font-semibold text-[#c4e5ec]">Usar acceso rápido</span>
-          <span className="mt-0.5 block text-[10px] text-[#6c8792]">explorer@vortyx.demo / datos locales</span>
+          <span className="block text-[12px] font-semibold text-[#c4e5ec]">Use quick access</span>
+          <span className="mt-0.5 block text-[10px] text-[#6c8792]">explorer@vortyx.demo / local data</span>
         </span>
         <ChevronRight className="h-4 w-4 text-[#64d9f6] transition-transform group-hover:translate-x-1" />
       </button>
       <div className="mt-6 flex gap-2 border-t border-white/[.08] pt-4 text-[10px] leading-4 text-[#718b95]">
         <CircleAlert className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#e8b96d]" />
-        <span>Las opciones binarias implican riesgo. Debes entender el mercado; podrás buscar ganancias, pero nunca están garantizadas.</span>
+        <span>Binary options involve risk. You must understand the market; you can pursue gains, but they are never guaranteed.</span>
       </div>
     </div>
   );
@@ -316,13 +316,13 @@ function DemoSession({ displayName, email, onLogout }: { displayName: string; em
       <div className="vortex-reveal vortex-reveal-delay-1">
         <div className="mb-6 flex items-center gap-3">
           <span className="h-2 w-2 rounded-full bg-[#66ddc2] shadow-[0_0_12px_rgba(102,221,194,.6)]" />
-          <span className="vortex-mono text-[10px] uppercase tracking-[.22em] text-[#66ddc2]" data-testid="status-session-active">Sesión demo activa</span>
+          <span className="vortex-mono text-[10px] uppercase tracking-[.22em] text-[#66ddc2]" data-testid="status-session-active">Demo session active</span>
         </div>
         <h1 className="vortex-display max-w-[620px] text-[clamp(3rem,7vw,6.7rem)] font-semibold leading-[.88] text-[#effaff]" data-testid="text-demo-welcome">
-          Hola,<br /><span className="text-[#65dcfa]">{displayName}.</span>
+          Hello,<br /><span className="text-[#65dcfa]">{displayName}.</span>
         </h1>
         <p className="mt-8 max-w-[460px] text-[15px] leading-7 text-[#8ca4ae]">
-          Tu espacio está listo. En esta primera versión puedes familiarizarte con la experiencia VORTYX; el panel de simulación llegará en la siguiente iteración.
+          Your space is ready. In this first version, you can get familiar with the VORTYX experience; the simulation dashboard will arrive in the next iteration.
         </p>
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <button
@@ -332,7 +332,7 @@ function DemoSession({ displayName, email, onLogout }: { displayName: string; em
             data-testid="button-logout"
           >
             <LogOut className="h-4 w-4" />
-            Cerrar sesión demo
+            Log out of demo
           </button>
           <span className="vortex-mono text-[10px] text-[#587581]" data-testid="text-demo-email">{email}</span>
         </div>
@@ -343,7 +343,7 @@ function DemoSession({ displayName, email, onLogout }: { displayName: string; em
           <div className="mb-7 flex items-start justify-between">
             <div>
               <div className="vortex-mono text-[9px] uppercase tracking-[.2em] text-[#688894]">Preview / workspace</div>
-              <h2 className="vortex-display mt-2 text-[25px] font-semibold text-[#e5f7fb]">Tu próxima lectura empieza aquí.</h2>
+              <h2 className="vortex-display mt-2 text-[25px] font-semibold text-[#e5f7fb]">Your next read starts here.</h2>
             </div>
             <Activity className="h-5 w-5 text-[#65dcfa]" />
           </div>
@@ -355,10 +355,10 @@ function DemoSession({ displayName, email, onLogout }: { displayName: string; em
               </div>
               <div className="text-right">
                 <div className="vortex-mono text-[12px] text-[#72dfc6]">1.0842</div>
-                <div className="mt-1 text-[10px] text-[#6a8b91]">simulación educativa</div>
+                <div className="mt-1 text-[10px] text-[#6a8b91]">educational simulation</div>
               </div>
             </div>
-            <svg viewBox="0 0 560 150" className="h-auto w-full" role="img" aria-label="Gráfico ilustrativo de movimiento de mercado">
+            <svg viewBox="0 0 560 150" className="h-auto w-full" role="img" aria-label="Illustrative market movement chart">
               <defs>
                 <linearGradient id="chart-fill" x1="0" x2="0" y1="0" y2="1">
                   <stop offset="0%" stopColor="#55d8f6" stopOpacity=".2" />
@@ -374,12 +374,12 @@ function DemoSession({ displayName, email, onLogout }: { displayName: string; em
             </div>
           </div>
           <div className="mt-5 grid grid-cols-2 gap-3">
-            <InfoTile icon={<TrendingUp />} label="Señales" value="Contextuales" />
-            <InfoTile icon={<ShieldCheck />} label="Riesgo" value="Siempre visible" />
+            <InfoTile icon={<TrendingUp />} label="Signals" value="Contextual" />
+            <InfoTile icon={<ShieldCheck />} label="Risk" value="Always visible" />
           </div>
           <div className="mt-5 flex items-center gap-2 text-[10px] text-[#718c96]">
             <Check className="h-3.5 w-3.5 text-[#72dfc6]" />
-            Simulación sin dinero real, sin resultados prometidos.
+            Simulation with no real money, no promised results.
           </div>
         </div>
       </div>
